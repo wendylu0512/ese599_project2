@@ -1,0 +1,27 @@
+﻿Build started 11/17/2014 6:39:16 AM.
+     1>Project "C:\Users\Wendi\Desktop\ese599_project2\ese599_project2.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\ese599_project2.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ese599_project2View.cpp
+         ese599_project2View.cpp
+     1>c:\users\wendi\desktop\ese599_project2\ese599_project2view.cpp(277): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\wendi\desktop\ese599_project2\ese599_project2view.cpp(300): warning C4018: '<' : signed/unsigned mismatch
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Wendi\Desktop\Debug\ese599_project2.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"C:\Users\Wendi\Desktop\Debug\ese599_project2.pdb" /SUBSYSTEM:WINDOWS,"5.01" /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Wendi\Desktop\Debug\ese599_project2.lib" /MACHINE:X86 Debug\ese599_project2.res
+         Debug\Camera.obj
+         Debug\Camera_dist_coeff.obj
+         Debug\Camera_int_param.obj
+         Debug\Coord2.obj
+         Debug\Coord3.obj
+         Debug\ese599_project2.obj
+         Debug\ese599_project2Doc.obj
+         Debug\ese599_project2View.obj
+         Debug\MainFrm.obj
+         Debug\Screen.obj
+         Debug\stdafx.obj
+         Debug\World.obj
+         ese599_project2.vcxproj -> C:\Users\Wendi\Desktop\Debug\ese599_project2.exe
+     1>Done Building Project "C:\Users\Wendi\Desktop\ese599_project2\ese599_project2.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.81
