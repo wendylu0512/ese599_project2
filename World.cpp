@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "World.h"
 
-// default world:
+ default world:
 // width = 1000, length = 1000, object at (500, 500)
 World::World()
 {
