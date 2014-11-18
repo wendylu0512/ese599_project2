@@ -2,7 +2,7 @@
 #include "World.h"
 
  //default world:
-// width = 1000, length = 1000, object at (500, 500)
+// width = 1000, length = 1000, object at (500, 500) test words
 World::World()
 {
 	this->object = Coord3(500, 500, 0);
