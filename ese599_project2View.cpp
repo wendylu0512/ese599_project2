@@ -173,7 +173,7 @@ void Cese599_project2View::draw_cam(CDC* pDC, Camera cam, int i)
 	else if (cam.get_y() == (*pDoc).get_room_dimension().get_y())
 		y_offset = 4;
 
-	pDC->Rectangle(scr.get_left() + (int)(cam.get_x()*scr.get_s()) - 5 + x_offset
+	pDC->Rectangle(scr.get_left() + (int)(cam.get_x()*scr.get_s()) - 5 + x_offset   //camera point region 
 		, scr.get_bottom() - (int)(cam.get_y()*scr.get_s() - 5) + y_offset
 		, scr.get_left() + (int)(cam.get_x() * scr.get_s() + 5) + x_offset
 		, scr.get_bottom() - (int)(cam.get_y()*scr.get_s() + 5) + y_offset);
@@ -187,7 +187,7 @@ void Cese599_project2View::draw_cam(CDC* pDC, Camera cam, int i)
 		, str);
 
 	pDC->SelectObject(pen_cov);
-	pDC->MoveTo((int)(cam.get_top_left_corner().get_x()*scr.get_s()) + scr.get_left()
+	pDC->MoveTo((int)(cam.get_top_left_corner().get_x()*scr.get_s()) + scr.get_left()   // camera coverage region
 		, scr.get_bottom() - (int)(cam.get_top_left_corner().get_y() *scr.get_s()));
 	pDC->LineTo((int)(cam.get_top_right_corner().get_x()*scr.get_s()) + scr.get_left()
 		, scr.get_bottom() - (int)(cam.get_top_right_corner().get_y() *scr.get_s()));
@@ -203,9 +203,9 @@ void Cese599_project2View::draw_cam(CDC* pDC, Camera cam, int i)
 
 void Cese599_project2View::draw_obj_on_sub(CDC* pDC, Coord2 obj, Screen scr,Camera cam, int k)
 {
-	int fixmargin = 40;
-	int a = 3;  // change a and b to change number of local grids
-	int b = 3;  // total local grids = a x b
+	int fixmargin = 40; // fix the position of the sub-screen
+	int a = 10;  // change a and b to change number of local grids
+	int b = 10;  // total local grids = a x b : b rows * a columns
 
 	string localstr;
 	int zone_in;   //local grid number
@@ -240,17 +240,18 @@ void Cese599_project2View::draw_obj_on_sub(CDC* pDC, Coord2 obj, Screen scr,Came
 		&& objy >= 0
 		&& objy <= scr.get_height())
 	{
-		zone_in = ((objx / (scrwidth / b))*a) + (objy / (scrheight / b));   // find local zone object is in
+		zone_in = ((objx / (scrwidth / a))*b) + ((scrheight - objy) / (scrheight / b));   // find local zone object is in
 		localstr += (std::to_string(zone_in) + " ");
 
-		zone_left = (int)((floor(zone_in / a)*scrwidth) / a);	//left border, calculated
+		zone_left = (int)(floor(objx / (scrwidth / a)) * (scrwidth / a));	//left border, calculated
 		zone_right = (int)(zone_left + (scrwidth / a));
-		zone_top = (int)(((zone_in % b)*scrheight) / b);
+		zone_top = (int)(floor(objy / (scrheight / b)) * (scrheight / b));
 		zone_bottom = (int)(zone_top + (scrheight / b));
 		/////////////////
-		cout << endl << "Zone IN: " << zone_in << endl;
-		cout << "Left border = " << zone_left << " Right Border = " << zone_right << endl;
-		cout << "Top border = " << zone_top << " Bottom Border = " << zone_bottom << endl;
+
+		//cout << endl << "Zone IN: " << zone_in << endl;
+		//cout << "Left border = " << zone_left << " Right Border = " << zone_right << endl;
+		//cout << "Top border = " << zone_top << " Bottom Border = " << zone_bottom << endl;
 		
 		//Cese599_project2Doc* pDoc = GetDocument();
 
