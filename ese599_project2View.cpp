@@ -263,9 +263,9 @@ void Cese599_project2View::draw_obj_on_sub(CDC* pDC, Coord2 obj, Screen scr,Came
 		cout << "Transformed Border (Bottom Left): " << mytemp.to_string() << "TOP RIGHT: " << top_right.to_string() << endl;
 
 		////////////////
-		for (int w = zone_left*2; w < zone_right*2; w+=2)
+		for (int w = zone_left * 2; w < zone_right * 2; w += 2)
 		{
-			for (int h = zone_top*2; h < zone_bottom*2; h+=2)
+			for (int h = zone_top * 2; h < zone_bottom * 2; h += 2)
 			{
 				ztemp = cam.cam_to_world(Coord2(w, h));
 				// cout << "ZTemp: " << ztemp.to_string() << endl;
